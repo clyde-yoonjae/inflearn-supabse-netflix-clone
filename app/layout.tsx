@@ -4,6 +4,7 @@ import './globals.css';
 import { ThemeProvider } from 'config/material-tailwind-theme-provider';
 import ReactQueryClientProvider from 'config/ReactQueryClientProvider';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+import Header from 'components/header';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -25,6 +26,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className={inter.className}>
+        <Header />
         <ReactQueryClientProvider>
           <ThemeProvider>
             {children}
