@@ -5,6 +5,7 @@ import { ThemeProvider } from 'config/material-tailwind-theme-provider';
 import ReactQueryClientProvider from 'config/ReactQueryClientProvider';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import Header from 'components/header';
+import Footer from 'components/footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -30,6 +31,7 @@ export default function RootLayout({ children }) {
         <ReactQueryClientProvider>
           <ThemeProvider>
             {children}
+            <Footer />
             <ReactQueryDevtools initialIsOpen={false} />
           </ThemeProvider>
         </ReactQueryClientProvider>
